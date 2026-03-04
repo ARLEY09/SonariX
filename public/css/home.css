@@ -1,15 +1,16 @@
 /* IMPORTANDO FUENTES */
-/* IMPORTANDO FUENTES */
 .anton-regular {
   font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 .league-gothic-title {
   font-family: "League Gothic", sans-serif;
   font-optical-sizing: auto;
@@ -17,6 +18,7 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
 .big-shoulders-title {
   font-family: "Big Shoulders", sans-serif;
   font-optical-sizing: auto;
@@ -28,35 +30,68 @@
 
 /* ESTILOS GENERALES */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-image: url("../img/background-purple.jpg");
-    background-size: cover;
+body {
+  background-image: url("../img/background-purple.jpg");
+  background-size: cover;
 }
 
-#contenedor-principal{
-    width: 1600px;
-    margin: 0px auto;
+#contenedor-principal {
+  width: 1600px;
+  margin: 0px auto;
 }
 
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CONTENEDOR PRINCIPAL ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 /*-------------------------------ESTILOS HEADER HOME----------------------------------*/
 
-header{
-    min-height: 200px;
+header {
+  min-height: 200px;
 }
 
-header h1{
-    color: #FFFFFF;
-    font-size: 120px;
-    font-family: Anton, Bebas Neue;
-    font-weight: bolder;
-    letter-spacing: 5px;
+header h1 {
+  color: #FFFFFF;
+  font-size: 120px;
+  font-family: Anton, Bebas Neue;
+  font-weight: bolder;
+  letter-spacing: 5px;
 }
+
+
+
+/*-------------------------------ESTILOS MAIN----------------------------------*/
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main section:first-child{
+  color: #FFFFFF;
+  margin-right: 20px;
+  border: 1px solid #F54927
+}
+main section:last-child{
+  color: #FFFFFF;
+
+  margin-left: 20px;
+  border: 1px solid #73F527
+}
+
+section{
+  min-height: 800px;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ FIN CONTENEDOR PRINCIPAL ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+

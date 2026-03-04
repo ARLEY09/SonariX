@@ -37,13 +37,30 @@
 
 /*-------------------------------ESTILOS BARRA DE NAVEGACION----------------------------------*/
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    background-color: #034CFF;
-    color: #FFFFFF;
-    height: 50px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  background-color: #034CFF;
+  color: #FFFFFF;
+  height: 50px;
+}
+nav h1{
+  font-family: Anton;
+  letter-spacing: 2px;
+  margin-left: 50px;
 }
 
+
+
+/*-------------------------------FOOTER----------------------------------*/
+
+footer{
+  font-family: Big Shoulders;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #034CFF;
+  color: #FFFFFF;
+}
