@@ -13,7 +13,7 @@ Por ultimo egregar por favor al formulario los campos de Pais, Departamento, Ciu
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SonariX - Igresar & Registrarse</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="script.js"></script>   
 </head>
 <body>
@@ -63,6 +63,18 @@ Por ultimo egregar por favor al formulario los campos de Pais, Departamento, Ciu
                     <input type="password" placeholder="Contraseña" required>
                     <i class="fas fa-eye eye-icon"></i>
                 </div>
+
+                <div class="input-group">
+                    <label for="Ciudad">Ciudad:</label>
+                    <select name="ciudad" id="ciudad">
+                        <option value="">--Seleccione ciudad--</option>
+                        <option value="Buenaventura">Buenaventura</option>
+                        <option value="Cali">Cali</option>
+                        <option value="Medellin">Medellin</option>
+                    </select>
+                </div>
+
+                
                 <button type="submit" class="btn-main">ENVIAR</button>
             </form>
 
