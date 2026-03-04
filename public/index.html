@@ -7,3 +7,76 @@ se puede redirigir al usuario a la pagina principal de la aplicacion una vez que
 <!-- El diseño tiene un error, los campos para el registro son Nickname, Nombre, Correo y contraseña
 El usurio no debe elegir si quiere ser admin, artista o usuario
 Por ultimo egregar por favor al formulario los campos de Pais, Departamento, Ciudad. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonariX - Igresar & Registrarse</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>   
+</head>
+<body>
+        <div class="container">
+        <div class="glass-card">
+            <h1 class="logo">Sonari<span>X</span></h1>
+            
+            <div class="tab-menu">
+                <button id="tab-login" class="tab-btn active" onclick="showForm('login')">Iniciar Sesion</button>
+                <button id="tab-register" class="tab-btn" onclick="showForm('register')">Regístrate</button>
+            </div>
+
+            <form id="form-login" class="auth-form active">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Correo" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Contraseña" required>
+                    <i class="fas fa-eye eye-icon"></i>
+                </div>
+                <div class="form-options">
+                    <label><input type="checkbox"> Recordarme</label>
+                <div class="olvidaste">  
+                    <a href="#">Olvidaste tu contraseña?</a>
+                </div> 
+                </div>
+                <button type="submit" class="btn-main">ENTRAR</button>
+            </form>
+
+            <form id="form-register" class="auth-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Nickname" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-music"></i>
+                    <input type="text" placeholder="Nombre" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Correo" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Contraseña" required>
+                    <i class="fas fa-eye eye-icon"></i>
+                </div>
+                <button type="submit" class="btn-main">ENVIAR</button>
+            </form>
+
+            <!--<div class="divider">
+                <span> <span id="social-text"> Ingresa </span> con : </span>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>-->
+        </div>
+    </div>  
+    
+</body>
+</html>
