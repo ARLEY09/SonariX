@@ -1,0 +1,299 @@
+/* Definición de variables globales para la paleta de colores de la imagen */
+:root {
+    --bg-dark-purple: #1f1d2c; /* Fondo general oscuro */
+    --accent-blue-header: #0047ff; /* Azul brillante del encabezado y pie */
+    --accent-blue-gradient-start: #2358fb; /* Inicio de degradado de botones */
+    --accent-blue-gradient-end: #042cb3; /* Fin de degradado de botones */
+    --text-primary: #ffffff; /* Texto principal blanco */
+    --text-muted: #8e8da1; /* Texto secundario grisáceo */
+    --text-views: #fbca23; /* Color amarillo de las vistas */
+    --filter-active-border: #ffffff; /* Borde de filtro activo */
+    --glass-card-bg: rgba(255, 255, 255, 0.03); /* Fondo sutil para tarjetas */
+    --placeholder-green: #3cd45c; /* Colores de fondo para fotos vacías */
+    --placeholder-yellow: #f1b32d;
+    --transition: all 0.3s ease; /* Transición suave por defecto */
+}
+
+/* Estilos globales y reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Usamos una fuente de sistema moderna */
+    
+}
+
+body {
+    background-color: var(--bg-dark-purple);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding-bottom: 60px; /* Espacio para el pie de página fijo */
+    background: linear-gradient(to right, #9f6cc2, #486cc5, #9763ce);
+    position: relative;
+    isolation: isolate; /* Crea un contexto de apilamiento */
+}
+
+/* Estilos del Encabezado */
+.top-header {
+    background-color: var(--accent-blue-header);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.user-avatar {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.logo span { color: #5dade2; }
+
+/* Contenedor principal de la página */
+.page-container {
+    max-width: 1400px;
+    width: 90%;
+    margin: 80px auto 30px; /* Espacio para el encabezado */
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+/* Diseño de dos columnas */
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* Estilos de la sección de filtros */
+.filters-section h2 {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 3rem;
+}
+
+/* Botón de filtro con degradado azul */
+.filter-btn {
+    background: linear-gradient(to right, var(--accent-blue-gradient-start), var(--accent-blue-gradient-end));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 71, 255, 0.4);
+}
+
+/* Estilos de la lista de artistas */
+.artist-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.artist-card {
+    display: flex;
+    align-items: center;
+    background: var(--glass-card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.artist-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.rank {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-muted);
+    width: 40px;
+    margin-right: 15px;
+}
+
+/* Contenedores de fotos de artistas */
+.artist-image-placeholder {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.green-placeholder { background-color: var(--placeholder-green); }
+.yellow-placeholder { background-color: var(--placeholder-yellow); }
+.other-placeholder { background-color: var(--text-muted); }
+
+.artist-image-placeholder img {
+    max-width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.artist-info h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.streams-count {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.location-genre {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Botón VER MÁS */
+.see-more-container {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.see-more-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    transition: var(--transition);
+}
+
+.see-more-btn:hover {
+    color: white;
+}
+
+.see-more-btn i {
+    font-size: 1.5rem;
+}
+
+/* Estilos de la columna de canciones promocionadas */
+.promoted-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.promoted-card {
+    margin-bottom: 2.5rem;
+}
+
+.video-thumbnail-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9; /* Mantiene la proporción de video */
+    background-color: black;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-thumbnail-placeholder img {
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.video-thumbnail-placeholder i {
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    opacity: 0.7;
+}
+
+.video-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.video-title {
+    font-weight: 600;
+}
+
+.video-views {
+    color: var(--text-views);
+    font-weight: 700;
+}
+
+/* Estilos del Pie de Página */
+.bottom-footer {
+    background-color: var(--accent-blue-header);
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.bottom-footer p {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 900px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+    .main-title {
+        font-size: 3rem;
+    }
+    .artist-info h3 {
+        font-size: 1.6rem;
+    }
+}
